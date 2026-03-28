@@ -52,6 +52,7 @@ SKILL_PACK = SkillPack(
     },
     banner_ascii=BANNER_ASCII,
     kids_mode=False,
+    theme="neural",
     level_titles=[
         (1, "Aware"),
         (6, "Questioning"),
