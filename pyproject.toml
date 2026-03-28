@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-academy"
+version = "1.0.0"
+description = "Learn AI from zero to mastery — an interactive terminal + web RPG covering fundamentals, prompt engineering, tools, ethics, coding, and agents."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "thorski1" }]
+keywords = [
+    "ai", "artificial-intelligence", "education", "learning", "game",
+    "prompt-engineering", "chatgpt", "claude", "llm", "terminal", "cli",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Role-Playing",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "rich>=13.0.0",
+    "quest-engine>=1.5.0",
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.20.0",
+    "jinja2>=3.0.0",
+    "python-multipart>=0.0.6",
+]
+
+[project.urls]
+Homepage      = "https://github.com/thorski1/ai-academy"
+Repository    = "https://github.com/thorski1/ai-academy"
+"Bug Tracker" = "https://github.com/thorski1/ai-academy/issues"
+
+[project.scripts]
+ai-academy              = "ai_academy.main:main_ai_academy"
+ai-basics-quest         = "ai_academy.main:main_ai_basics"
+prompt-engineering-quest = "ai_academy.main:main_prompt_engineering"
+chatbots-quest          = "ai_academy.main:main_chatbots"
+ai-tools-quest          = "ai_academy.main:main_ai_tools"
+ai-ethics-quest         = "ai_academy.main:main_ai_ethics"
+ai-for-work-quest       = "ai_academy.main:main_ai_for_work"
+ai-coding-quest         = "ai_academy.main:main_ai_coding"
+ai-agents-quest         = "ai_academy.main:main_ai_agents"
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["ai_academy*"]
+
+[tool.setuptools.package-data]
+ai_academy = ["skill-packs/**/*.py", "campaigns/**/*.py", "campaigns/**/*.json"]
