@@ -25,7 +25,7 @@ _WEB = "--web" in sys.argv
 
 AI_PACKS = [
     "ai_basics", "prompt_engineering", "chatbots", "ai_tools",
-    "ai_ethics", "ai_for_work", "ai_coding", "ai_agents", "ai_safety",
+    "ai_ethics", "ai_for_work", "ai_coding", "ai_agents", "ai_safety", "ai_rag",
 ]
 
 
